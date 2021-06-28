@@ -82,96 +82,65 @@ The number of people in the reservation
     The number of people in the reservation
     (0: print current reservations, -1: exit):
     ```
-## Assignment
 
-Write a C program that will get the outcome of each point (1 for player 1, and
-2 for player 2) and print the status of the game. At the end of the game, the
-program will report the winner.
-Below is an example run (italic parts are user inputs):
+3. If the requested number of reservations cannot be made, the program should notify the user as shown below.
 
 ```
-0-0
-Point: 1
-15-0
-Point: 1
-30-0
-Point: 1
-40-0
-Point: 2
-40-15
-Point: 1
-GAME: PLAYER 1
-```
-Another example involving a deuce:
+The number of people in the reservation
+ (0: print current reservations, -1: exit): 4
+Reserved seats: 4A 4B 4C 4D
 
+   A B | | C D E | | F G
+1  X X | | - - - | | - -
+2  - - | | - X X | | X X
+3  - - | | - - - | | - -
+4  + + | | + + - | | - -
+5  - - | | - - - | | X X
+6  - - | | - - - | | - -
+7  - - | | - - - | | - -
+8  - - | | X X X | | X X
+9  X - | | - - - | | - -
+10 X X | | X X X | | X X
+11 - - | | - - - | | - -
+12 - - | | - - - | | X X
+
+The number of people in the reservation
+ (0: print current reservations, -1: exit): 9
+
+No available seats for the requested reservation!
+
+The number of people in the reservation
+ (0: print current reservations, -1: exit):
 ```
-0-0
-Point: 1
-15-0
-Point: 2
-15-15
-Point: 2
-15-30
-Point: 2
-15-40
-Point: 1
-30-40
-Point: 1
-DEUCE
-Point: 1
-ADVANTAGE: PLAYER 1
-Point: 2
-DEUCE
-Point: 2
-ADVANTAGE: PLAYER 2
-Point: 2
-GAME: PLAYER 2
-```
-You don't need to validate user inputs; you can assume that the user always
-enters 1 or 2.
+
+4. After each reservation, the program will continue asking for information for another reservation. If the user enters 0 for the number of people in the reservation, the program will print the aircraft layout with the current reserved and empty seats properly marked. Please note that + signs will disappear and be replaced by X in the iterations that follow the current reservation iteration. When user enters -1, then the program will exit.
+
+5. You may assume that we will always provide appropriate input, e.g., no string input where integer expected, or no values that are outside of the stated min-max boundaries in item 1.
 
 ## Rules
 
 
-* Your source code le has to have the name assignment1.c.
-* Your program will be compiled using the following command on a Linux
-system. If it cannot be compiled and linked using this command, it will
-not be graded (failed submission).
+* Your source code must have the name assignment2.c.
+
+* Your program will be compiled using the following command on a Linux system. If it cannot be compiled and linked using this command, it will not be graded (failed submission).
 
 ```
-gcc -std=c99 -Wall -Werror assignment1.c -o assignment
+gcc -std=c99 -Wall -Werror -lm assignment2.c -o assignment2
 ```
-* Your program will be checked using an automatic checker. Therefore,
-make sure you print the messages exactly as given in the example runs.
-You will be given a Calico test file for some basic I/O tests; run your
-assignment through Calico before submitting.
+* Your program will be checked using an automatic checker. Therefore, make sure you print the messages exactly as given in the example runs. You will be given a Calico test for some basic input/output tests. Please run your assignment through Calico before submitting.
 
-* Do NOT use statements for clearing the terminal or waiting for a keypress
-before exiting the program; these might cause your program to fail in
-the automatic tests. Some IDEs generate such statements, remove them.
-Running your program through Calico is the safest way to make sure that
-your program works as expected.
+* Do NOT use statements for clearing the terminal or waiting for a keypress before exiting the program; these might cause your program to fail in the automatic tests. Some IDEs generate such statements, remove them. Running your program through Calico is the safest way to make sure that your program works as expected.
 
-* Do NOT use any construct that hasn't been covered in the course before
-this week, such as arrays or functions. Do NOT use any C++ features
-such as cout and cin.
+* Do NOT use any construct that hasn't been covered in the course before this week, such as structs.
 
-* Do NOT use any external functions except for printf and scanf.
+* Do NOT use any external functions except for printf, scanf, abs, and pow.
 
-* Make sure your coding style is proper and consistent. Use the clang-format
-tool if necessary. Don't use any variable names in a language other than
-English.
+* Make sure your coding style is proper and consistent. Use the clang-format tool if necessary. Don't use any variable names in a language other than English.
 
-* This is an individual assignment. Collaboration in any form is NOT al-
-lowed. No working together, no sharing code in any form including
-showing code to your classmates to give them ideas.
+* This is an individual assignment. Collaboration in any form is NOT allowed. No working together, no sharing code in any form including showing code to your classmates or talking to them to give them ideas.
 
-* All the code you submit must be your own. Don't copy/paste any piece of
-code from any resource including anything you've found on the Internet.
+* All the code you submit must be your own. Don't copy/paste any piece of code from any resource including anything you've found on the Internet.
 
-* The assignments will be checked for plagiarism using both automated
-tools and manual inspection. Any assignment involving plagiarism and/or
-infringement of intellectual property will be not be graded and is subject
-to further disciplinary actions.
+* The assignments will be checked for plagiarism using both automated tools and manual inspection. Any assignment involving plagiarism and/or infringement of intellectual property will be not be graded and is subject to further disciplinary actions.
 
 
