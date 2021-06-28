@@ -40,20 +40,46 @@ The number of people in the reservation
 
     a) Considering the COVID-19 situation, your program will try to assign seats to the passengers to place them as far as possible from each other to minimize the risk of infection. To this end, for a passenger, it will assign a new seat that has the largest total distance to the already reserved seats. The distance between a seat s1 (located at row i1, column j1) and another seat s2 (located at row i2, column j2) will be computed as follows:
 
+    <img src="https://latex.codecogs.com/svg.image?dist(s_{1},&space;s_{2})&space;=&space;|&space;i_{1}&space;-&space;i_{2}|&space;&plus;&space;\frac{|&space;j_{1}&space;-&space;j_{2}|}{2}" title="dist(s_{1}, s_{2}) = | i_{1} - i_{2}| + \frac{| j_{1} - j_{2}|}{2}" />
+
     where each aisle location should also be taken into consideration as equivalent to one seat space.
+
+    <img src="https://latex.codecogs.com/svg.image?adjusted_-dist(s_{1},&space;s_{2})&space;=&space;\left\{\begin{matrix}&space;0&space;&space;&space;&&space;if&space;dist(s_{1},&space;s_{2})&space;=&space;0&space;\\&space;100&space;-&space;(100)^{\frac{1/}{dist(s_{1},&space;s_{2})}}&space;&&space;&space;otherwise\end{matrix}\right." title="adjusted_-dist(s_{1}, s_{2}) = \left\{\begin{matrix} 0 & if dist(s_{1}, s_{2}) = 0 \\ 100 - (100)^{\frac{1/}{dist(s_{1}, s_{2})}} & otherwise\end{matrix}\right." />
 
     Then, the score of a seat sx is computed as:
 
+    <img src="https://latex.codecogs.com/svg.image?score(s_{x})=&space;\sum&space;s_{i}\epsilon&space;\textit{Already&space;reserved&space;seats&space;&space;}&space;adjusted_-dist(s_{x},&space;s_{i})&space;" title="score(s_{x})= \sum s_{i}\epsilon \textit{Already reserved seats } adjusted_-dist(s_{x}, s_{i}) " />
 
     b) For a single passenger reservation, an empty seat with the maximum score is assigned. If there are different seat candidates with the same score, then the one with lower row number will be chosen. If the row numbers are also the same, the one with the lower column number will be assigned.
 
     c) For a family reservation that includes n individuals (n > 1), your program will look for a consecutive block of n seats located in the same row (note that a seat block is allowed to span one or more aisles). If there is no such block of seats, your program will not make group reservation by printing an appropriate message as illustrated in the following examples. For a block of n seats the distance-based score will be computed as follows:
 
-
+    <img src="https://latex.codecogs.com/svg.image?seat_-block_-score&space;(s_{1},&space;s_{2}&space;...&space;s_{n})=&space;&space;\sum_{i=1}^{n}&space;score(s_{i})" title="seat_-block_-score (s_{1}, s_{2} ... s_{n})= \sum_{i=1}^{n} score(s_{i})" />
 
     If there are different seat blocks with the same score, then the one with the least number of aisles passing through the block will be assigned. For instance, seat blocks which are not divided with aisles in the same row will be preferred over those where one or more aisles divide the block. For two different seat blocks, if seat block scores are the same, and the number of aisles passing through these blocks are also the same, then the seat block with the lower row number will be preferred. If the row numbers are also the same, then the one with the lower column number (of the leftmost seat in the block) will be assigned.
 
     d) After an appropriate empty seat is assigned based on the above-explained score considerations, the row number and column letter of the assigned seat (s) will be listed on the same line. Then, this message will be followed by the aircraft layout showing the just reserved seats as shown in the following example where X represent seats that are reserved in previous iterations, + shows the seats that are just reserved in the most recent step, and – shows empty seats.
+
+    ```
+    The number of people in the reservation
+    (0: print current reservations, -1: exit): 5
+    Reserved seats: 8A 8B 8C 8D 8E
+    A B | | C D E | | F G
+    1 X - | | - - - | | - X
+    2 - - | | - - - | | - -
+    3 - - | | X X X | | X -
+    4 - X | | - - - | | - -
+    5 - - | | - - - | | X -
+    6 - - | | - - - | | - -
+    7 - - | | X - - | | - -
+    8 + + | | + + + | | - -
+    9 - - | | - - - | | - X
+    10 X - | | - - - | | - -
+    11 - - | | - - - | | - -
+    12 X X | | X - - | | - X
+    The number of people in the reservation
+    (0: print current reservations, -1: exit):
+    ```
 ## Assignment
 
 Write a C program that will get the outcome of each point (1 for player 1, and
