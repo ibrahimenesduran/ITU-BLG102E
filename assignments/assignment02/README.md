@@ -40,14 +40,7 @@ The number of people in the reservation
 
     a) Considering the COVID-19 situation, your program will try to assign seats to the passengers to place them as far as possible from each other to minimize the risk of infection. To this end, for a passenger, it will assign a new seat that has the largest total distance to the already reserved seats. The distance between a seat s1 (located at row i1, column j1) and another seat s2 (located at row i2, column j2) will be computed as follows:
 
-```
-𝑑𝑖𝑠𝑡(𝑠1,𝑠2) = |𝑖1 − 𝑖2|+ |𝑗1 − 𝑗2| / (2.0)
-```
-
     where each aisle location should also be taken into consideration as equivalent to one seat space.
-```
-
-```
 
     Then, the score of a seat sx is computed as:
 
