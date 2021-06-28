@@ -1,0 +1,85 @@
+- init:
+    run: rm -f assignment3
+    blocker: true
+
+- build:
+    run: gcc -std=c99 -Wall -Werror assignment3.c -o assignment3
+    exit: 0
+    blocker: true
+
+- case1:
+    run: ./assignment3 ./votes/votes.txt
+    script:
+        - expect: "Winner: C"
+    exit: 0
+    points: 10
+
+- case2:
+    run: ./assignment3 ./votes/votes2.txt
+    script:
+        - expect: "Second round: D and A"
+    exit: 0
+    points: 10
+
+- case3:
+    run: ./assignment3 ./votes/votes3.txt
+    script:
+        - expect: "Second round: B and C"
+    exit: 0
+    points: 10
+
+- case4:
+    run: ./assignment3 ./votes/votes4.txt
+    script:
+        - expect: "Second round: B and C"
+    exit: 0
+    points: 10
+
+- case5:
+    run: ./assignment3 ./votes/votes5.txt
+    script:
+        - expect: "Second round: C and D"
+    exit: 0
+    points: 10
+
+- case6:
+    run: ./assignment3 ./votes/votes6.txt
+    script:
+        - expect: "Second round: A and C"
+    exit: 0
+    points: 10
+
+- case7:
+    run: ./assignment3 ./votes/votes7.txt
+    script:
+        - expect: "Second round: A and B"
+    exit: 0
+    points: 10
+
+- case8:
+    run: ./assignment3 ./votes/votes8.txt
+    script:
+        - expect: "Winner: C"
+    exit: 0
+    points: 10
+
+- case9:
+    run: ./assignment3 ./votes/votes9.txt
+    script:
+        - expect: "Second round: C and B"
+    exit: 0
+    points: 10
+
+- case10:
+    run: ./assignment3 ./votes/votes10.txt
+    script:
+        - expect: "Second round: B and A"
+    exit: 0
+    points: 10
+
+- case11:
+    run: ./assignment3 ./votes/votes11.txt
+    script:
+        - expect: "Second round: A and B"
+    exit: 0
+    points: 10
