@@ -65,7 +65,7 @@ The number of people in the reservation
     (0: print current reservations, -1: exit): 4
     Reserved seats: 4A 4B 4C 4D
 
-    A B | | C D E | | F G
+       A B | | C D E | | F G
     1  X X | | - - - | | - -
     2  - - | | - X X | | X X
     3  - - | | - - - | | - -
