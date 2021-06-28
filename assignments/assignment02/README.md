@@ -62,21 +62,23 @@ The number of people in the reservation
 
     ```
     The number of people in the reservation
-    (0: print current reservations, -1: exit): 5
-    Reserved seats: 8A 8B 8C 8D 8E
+    (0: print current reservations, -1: exit): 4
+    Reserved seats: 4A 4B 4C 4D
+
     A B | | C D E | | F G
-    1 X - | | - - - | | - X
-    2 - - | | - - - | | - -
-    3 - - | | X X X | | X -
-    4 - X | | - - - | | - -
-    5 - - | | - - - | | X -
-    6 - - | | - - - | | - -
-    7 - - | | X - - | | - -
-    8 + + | | + + + | | - -
-    9 - - | | - - - | | - X
-    10 X - | | - - - | | - -
+    1  X X | | - - - | | - -
+    2  - - | | - X X | | X X
+    3  - - | | - - - | | - -
+    4  + + | | + + - | | - -
+    5  - - | | - - - | | X X
+    6  - - | | - - - | | - -
+    7  - - | | - - - | | - -
+    8  - - | | X X X | | X X
+    9  X - | | - - - | | - -
+    10 X X | | X X X | | X X
     11 - - | | - - - | | - -
-    12 X X | | X - - | | - X
+    12 - - | | - - - | | X X
+
     The number of people in the reservation
     (0: print current reservations, -1: exit):
     ```
