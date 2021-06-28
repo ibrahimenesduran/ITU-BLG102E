@@ -67,7 +67,7 @@ enters 1 or 2.
 ## Rules
 
 
-* Your source code le has to have the name assignment1.c.
+* Your source code le has to have the name assignment1.c.
 * Your program will be compiled using the following command on a Linux
 system. If it cannot be compiled and linked using this command, it will
 not be graded (failed submission).
