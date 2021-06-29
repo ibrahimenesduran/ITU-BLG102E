@@ -48,8 +48,8 @@ Second round: C and A
 ```
 
 In the case of a second round, the letter of the candidate with the highest
-number of votes must come rst. You don't need to validate the contents of
-the le; you can assume that there are a correct number of lines with a correct
+number of votes must come first. You don't need to validate the contents of
+the file; you can assume that there are a correct number of lines with a correct
 number of vote values on each line.
 You have to use the following data structure to represent a candidate:
 
@@ -64,12 +64,12 @@ float percent;
 There is no limit on the number of districts; any array that requires this infor-
 mation must be dynamically allocated with the proper (minimal required) size
 after the number of districts is determined during the run of the program. The
-length of a line in the text le is at most 80; static allocation is allowed if you
+length of a line in the text file is at most 80; static allocation is allowed if you
 want to use an array for this purpose.
 Write the following functions:
 
-* A function that takes the input le name as a parameter and reads the
-vote data from the le. You can send other parameters to the function
+* A function that takes the input file name as a parameter and reads the
+vote data from the file. You can send other parameters to the function
 and return anything you want.
 * A function that will calculate the total number of votes and percentages
 for each candidate.
@@ -80,7 +80,7 @@ will compete in the second round.
 ## Rules
 
 
-* Your source code le has to have the name assignment3.c.
+* Your source code file has to have the name assignment3.c.
 
 * Your program will be compiled using the following command on a Linux
 system. If it cannot be compiled and linked using this command, it will
